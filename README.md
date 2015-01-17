@@ -111,9 +111,34 @@ chown 547:root /data/jira; chmod 770 /data/jira; exit;
 docker run --name jira --volumes-from jira-data -d -p 8080:8080 ahaasler/jira
 	```
 
+### PostgreSQL external database
+
+A great way to connect your Jira instance with a PostgreSQL database is
+using the [docker-jira-postgres](https://github.com/ahaasler/docker-jira-postgres "A PostgreSQL container for docker-jira")
+image.
+
+1. Create and name the database container:
+
+	```bash
+docker run --name jira-postgres -d ahaasler/jira-postgres
+	```
+
+2. Use it in the Jira container:
+
+	```bash
+docker run --name jira --link jira-postgres:jira-postgres -d -p 8080:8080 ahaasler/jira
+	```
+
+3. Connect your Jira instance following the Atlassian documentation:
+[Configure your JIRA server to connect to your PostgreSQL database](https://confluence.atlassian.com/display/JIRA/Connecting+JIRA+to+PostgreSQL#ConnectingJIRAtoPostgreSQL-3.ConfigureyourJIRAservertoconnecttoyourPostgreSQLdatabase "Configure your JIRA server to connect to your PostgreSQL database").
+
+>  See [docker-jira-postgres](https://github.com/ahaasler/docker-jira-postgres "A PostgreSQL container for docker-jira")
+for more information and configuration options.
+
 ## Thanks
 
 * [Docker](https://www.docker.com/ "Docker") for this amazing container engine.
+* [PostgreSQL](http://www.postgresql.org/) for this advanced database.
 * [Atlassian](https://www.atlassian.com/ "Atlassian") for making great products. Also for their work on [atlassian-docker](https://bitbucket.org/atlassianlabs/atlassian-docker "atlassian-docker repo") which inspired this.
 * [Azul Systems](http://www.azulsystems.com/ "Azul Systems") for their *OpenJDK* docker base image.
 * And specially to you and the entire community.

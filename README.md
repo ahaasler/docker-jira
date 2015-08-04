@@ -1,6 +1,7 @@
 # docker-jira: A Docker image for Jira.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/ahaasler/jira/status "Docker Repository on Quay.io")](https://quay.io/repository/ahaasler/jira)
+[![Release](https://img.shields.io/github/release/ahaasler/docker-jira.svg?style=flat)](https://github.com/ahaasler/docker-jira/releases/latest)
 
 ## Features
 

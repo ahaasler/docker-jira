@@ -3,7 +3,7 @@ MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
 
 # Configuration
 ENV JIRA_HOME /data/jira
-ENV JIRA_VERSION 6.4.2
+ENV JIRA_VERSION 6.4.3
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \

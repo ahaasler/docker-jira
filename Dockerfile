@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-debian:latest
+FROM java:8u66-jre
 MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
 
 # Configuration

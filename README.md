@@ -9,9 +9,8 @@
 
 ## Features
 
-* Runs on a production ready *OpenJDK* 8 - [Zulu](http://www.azulsystems.com/products/zulu "Zulu: Multi-platform Certified OpenJDK") by Azul Systems.
+* Runs on *Oracle Java* 8.
 * Ready to be configured with *Nginx* as a reverse proxy (https available).
-* Built on top of *Debian* for a minimal image size.
 
 ## Usage
 
@@ -145,7 +144,6 @@ for more information and configuration options.
 * [Docker](https://www.docker.com/ "Docker") for this amazing container engine.
 * [PostgreSQL](http://www.postgresql.org/) for this advanced database.
 * [Atlassian](https://www.atlassian.com/ "Atlassian") for making great products. Also for their work on [atlassian-docker](https://bitbucket.org/atlassianlabs/atlassian-docker "atlassian-docker repo") which inspired this.
-* [Azul Systems](http://www.azulsystems.com/ "Azul Systems") for their *OpenJDK* docker base image.
 * And specially to you and the entire community.
 
 ## License

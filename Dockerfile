@@ -1,19 +1,8 @@
-FROM java:8u66-jre
+FROM ahaasler/jira-base:alpine-8u102b14-server-jre
 MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
 
 # Configuration
-ENV JIRA_HOME /data/jira
 ENV JIRA_VERSION 6.4.13
-
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-	curl \
-	tar \
-	xmlstarlet
-
-# Create the user that will run the jira instance and his home directory (also make sure that the parent directory exists)
-RUN mkdir -p $(dirname $JIRA_HOME) \
-	&& useradd -m -d $JIRA_HOME -s /bin/bash -u 547 jira
 
 # Download and install jira in /opt with proper permissions and clean unnecessary files
 RUN curl -Lks http://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-$JIRA_VERSION.tar.gz -o /tmp/jira.tar.gz \

@@ -4,6 +4,19 @@ MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
 # Configuration
 ENV JIRA_VERSION 7.0.0
 
+# Get environment variables for building
+ARG SOURCE_COMMIT
+ARG DOCKER_TAG
+
+# Build-time metadata as defined at http://label-schema.org
+LABEL org.label-schema.name="jira" \
+	org.label-schema.description="A Docker image for Jira" \
+	org.label-schema.url="https://www.atlassian.com/software/jira/core" \
+	org.label-schema.vcs-ref=$SOURCE_COMMIT \
+	org.label-schema.vcs-url="https://github.com/ahaasler/docker-jira" \
+	org.label-schema.version=$DOCKER_TAG \
+	org.label-schema.schema-version="1.0"
+
 # Download and install jira in /opt with proper permissions and clean unnecessary files
 RUN curl -Lks https://downloads.atlassian.com/software/jira/downloads/atlassian-jira-core-$JIRA_VERSION.tar.gz -o /tmp/jira.tar.gz \
 	&& mkdir -p /opt/jira \

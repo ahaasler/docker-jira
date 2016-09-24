@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/github/release/ahaasler/docker-jira.svg?style=flat)](https://github.com/ahaasler/docker-jira/releases/latest)
 [![Docker Stars](https://img.shields.io/docker/stars/ahaasler/jira.svg?style=flat)](https://hub.docker.com/r/ahaasler/jira/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/ahaasler/jira.svg?style=flat)](https://hub.docker.com/r/ahaasler/jira/)
-[![Image Size](https://img.shields.io/imagelayers/image-size/ahaasler/jira/latest.svg?style=flat)](https://imagelayers.io/?images=ahaasler/jira:latest)
+[![Image Size](https://images.microbadger.com/badges/image/ahaasler/jira.svg)](https://microbadger.com/images/ahaasler/jira)
 
 ## Features
 

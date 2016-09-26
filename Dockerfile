@@ -6,7 +6,7 @@ ENV JIRA_VERSION 7.0.2
 
 # Get environment variables for building
 ARG SOURCE_COMMIT
-ARG DOCKER_TAG
+ARG SOURCE_TAG
 
 # Build-time metadata as defined at http://label-schema.org
 LABEL org.label-schema.name="jira" \
@@ -14,7 +14,7 @@ LABEL org.label-schema.name="jira" \
 	org.label-schema.url="https://www.atlassian.com/software/jira/core" \
 	org.label-schema.vcs-ref=$SOURCE_COMMIT \
 	org.label-schema.vcs-url="https://github.com/ahaasler/docker-jira" \
-	org.label-schema.version=$DOCKER_TAG \
+	org.label-schema.version=$SOURCE_TAG \
 	org.label-schema.schema-version="1.0"
 
 # Download and install jira in /opt with proper permissions and clean unnecessary files

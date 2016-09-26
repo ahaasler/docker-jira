@@ -1,0 +1,6 @@
+#!/bin/bash
+case "$DOCKER_TAG" in
+	master|latest) tag=master ;;
+	*) tag=v$DOCKER_TAG ;;
+esac
+docker build -t $IMAGE_NAME --build-arg SOURCE_COMMIT=$SOURCE_COMMIT --build-arg SOURCE_TAG=$tag .

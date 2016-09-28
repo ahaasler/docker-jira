@@ -7,9 +7,11 @@ ENV JIRA_VERSION 7.0.2
 # Get environment variables for building
 ARG SOURCE_COMMIT
 ARG SOURCE_TAG
+ARG BUILD_DATE
 
 # Build-time metadata as defined at http://label-schema.org
-LABEL org.label-schema.name="jira" \
+LABEL org.label-schema.build-date=$BUILD_DATE \
+	org.label-schema.name="jira" \
 	org.label-schema.description="A Docker image for Jira" \
 	org.label-schema.url="https://www.atlassian.com/software/jira/core" \
 	org.label-schema.vcs-ref=$SOURCE_COMMIT \

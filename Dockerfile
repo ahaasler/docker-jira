@@ -3,6 +3,7 @@ MAINTAINER Adrian Haasler García <dev@adrianhaasler.com>
 
 # Configuration
 ENV JIRA_VERSION 7.2.7
+ENV JIRA_VERSION 7.2.8
 
 # Get environment variables for building
 ARG SOURCE_COMMIT
